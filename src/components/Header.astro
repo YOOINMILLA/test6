@@ -2,29 +2,24 @@
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
-<header class="bg-gradient-to-r from-purple-950 via-indigo-900 to-black shadow-lg border-b border-indigo-700">
-  <nav class="flex flex-wrap justify-between items-center px-6 py-4 text-lime-200 font-mono">
-    <h2 class="text-2xl font-bold tracking-widest text-cyan-400 hover:text-pink-400 transition-all duration-300">
+<header class="bg-black/70 backdrop-blur border-b border-indigo-800 shadow-md z-50">
+  <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center font-mono text-lime-200">
+    <h2 class="text-xl sm:text-2xl font-semibold tracking-wider text-cyan-400 hover:text-pink-400 transition-colors">
       <a href="/">{SITE_TITLE}</a>
     </h2>
-    <div class="internal-links flex gap-6 text-lg">
-      <HeaderLink href="/" class="hover:text-yellow-300 transition">Core</HeaderLink>
-      <HeaderLink href="/blog" class="hover:text-emerald-300 transition">Log</HeaderLink>
-      <HeaderLink href="/about" class="hover:text-rose-300 transition">Signal</HeaderLink>
-    </div>
-    <div class="social-links flex gap-4 items-center">
-      <a href="https://m.webtoo.ls/@astro" target="_blank" class="hover:text-fuchsia-300 transition" title="Mastodon">
-        <span class="sr-only">Follow on Mastodon</span>
-        <!-- Mastodon SVG -->
-      </a>
-      <a href="https://twitter.com/astrodotbuild" target="_blank" class="hover:text-sky-400 transition" title="Twitter">
-        <span class="sr-only">Follow on Twitter</span>
-        <!-- Twitter SVG -->
-      </a>
-      <a href="https://github.com/withastro/astro" target="_blank" class="hover:text-pink-300 transition" title="GitHub">
-        <span class="sr-only">GitHub Repo</span>
-        <!-- GitHub SVG -->
-      </a>
+    <div class="flex gap-6 text-sm sm:text-base">
+      <HeaderLink href="/" class="relative group">
+        <span class="group-hover:text-yellow-300 transition-colors">Core</span>
+        <span class="absolute left-0 bottom-0 w-full h-0.5 bg-yellow-300 scale-x-0 group-hover:scale-x-100 origin-left transition-transform"></span>
+      </HeaderLink>
+      <HeaderLink href="/blog" class="relative group">
+        <span class="group-hover:text-emerald-300 transition-colors">Log</span>
+        <span class="absolute left-0 bottom-0 w-full h-0.5 bg-emerald-300 scale-x-0 group-hover:scale-x-100 origin-left transition-transform"></span>
+      </HeaderLink>
+      <HeaderLink href="/about" class="relative group">
+        <span class="group-hover:text-rose-300 transition-colors">Signal</span>
+        <span class="absolute left-0 bottom-0 w-full h-0.5 bg-rose-300 scale-x-0 group-hover:scale-x-100 origin-left transition-transform"></span>
+      </HeaderLink>
     </div>
   </nav>
 </header>
