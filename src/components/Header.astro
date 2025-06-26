@@ -1,23 +1,23 @@
----
-import { SITE_TITLE } from '../consts';
----
-<header class="bg-black/70 backdrop-blur border-b border-indigo-800 shadow-md z-50">
-  <nav class="max-w-5xl mx-auto flex flex-col items-center px-4 py-6 font-mono text-lime-200 space-y-4">
-    <h2 class="text-2xl font-semibold tracking-wider text-cyan-400 hover:text-pink-400 transition-colors text-center">
-      <a href="/">{SITE_TITLE}</a>
+<header class="relative z-50 bg-gradient-to-r from-black via-indigo-950 to-black shadow-[0_2px_30px_rgba(0,255,255,0.1)] border-b border-cyan-500">
+  <nav class="max-w-6xl mx-auto px-6 py-8 flex flex-col items-center justify-center font-mono text-lime-200 space-y-4">
+    <!-- Glowing Title -->
+    <h2 class="text-4xl sm:text-5xl font-extrabold tracking-widest text-transparent bg-clip-text bg-gradient-to-br from-cyan-300 via-blue-500 to-indigo-400 animate-pulse drop-shadow-lg">
+      <a href="/" class="hover:opacity-90 transition-opacity">Nucleus Node</a>
     </h2>
-    <div class="flex gap-8 text-sm sm:text-base justify-center">
-      <a href="/" class="group relative text-lime-200 hover:text-yellow-300 transition-colors">
+
+    <!-- Animated Nav Links -->
+    <div class="flex flex-wrap justify-center gap-10 text-lg relative">
+      <a href="/" class="group relative text-cyan-200 font-medium hover:text-yellow-300 transition-all">
         Core
-        <span class="absolute left-0 -bottom-1 w-full h-0.5 bg-yellow-300 scale-x-0 group-hover:scale-x-100 origin-left transition-transform"></span>
+        <span class="absolute left-0 -bottom-1 w-full h-0.5 bg-yellow-300 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
       </a>
-      <a href="/blog" class="group relative text-lime-200 hover:text-emerald-300 transition-colors">
+      <a href="/blog" class="group relative text-cyan-200 font-medium hover:text-emerald-300 transition-all">
         Log
-        <span class="absolute left-0 -bottom-1 w-full h-0.5 bg-emerald-300 scale-x-0 group-hover:scale-x-100 origin-left transition-transform"></span>
+        <span class="absolute left-0 -bottom-1 w-full h-0.5 bg-emerald-300 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
       </a>
-      <a href="/about" class="group relative text-lime-200 hover:text-rose-300 transition-colors">
+      <a href="/about" class="group relative text-cyan-200 font-medium hover:text-pink-400 transition-all">
         Signal
-        <span class="absolute left-0 -bottom-1 w-full h-0.5 bg-rose-300 scale-x-0 group-hover:scale-x-100 origin-left transition-transform"></span>
+        <span class="absolute left-0 -bottom-1 w-full h-0.5 bg-pink-400 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
       </a>
     </div>
   </nav>
